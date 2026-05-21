@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { eq, desc, sql } from "drizzle-orm";
 import { createRouter, staffQuery, publicQuery } from "../middleware";
-import { getDb } from "@db/queries/connection";
+import { getDb } from "../../api/queries/connection";
 import { notifications, members } from "@db/schema";
 
 export const notificationRouter = createRouter({
@@ -123,3 +123,6 @@ export const notificationRouter = createRouter({
         .limit(input.limit);
     }),
 });
+
+
+

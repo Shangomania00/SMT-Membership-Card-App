@@ -4,7 +4,7 @@ import * as jose from "jose";
 import * as cookie from "cookie";
 import { env } from "../lib/env";
 import { getSessionCookieOptions } from "../lib/cookies";
-import { Session } from "@contracts/constants";
+import { Session } from "../contracts/constants.js";
 import { Errors } from "@contracts/errors";
 import { signSessionToken, verifySessionToken } from "./session";
 import { users as kimiUsers } from "./platform";
@@ -128,3 +128,6 @@ export function createOAuthCallbackHandler() {
 }
 
 export { exchangeAuthCode, verifyAccessToken };
+
+
+

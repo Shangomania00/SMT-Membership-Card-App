@@ -28,3 +28,6 @@ export const users = {
   getProfile: (token: string) =>
     kimiRequest<UserProfile>("/v1/users/me/profile", token),
 };
+
+
+

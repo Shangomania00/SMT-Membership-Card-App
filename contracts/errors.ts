@@ -1,15 +1,26 @@
-type AppError = { tag: "app_error"; status: number; message: string };
+﻿export const Errors = {
+  forbidden: (message: string) => {
+    const error = new Error(message);
+    (error as any).status = 403;
+    return error;
+  },
+  unauthorized: (message: string) => {
+    const error = new Error(message);
+    (error as any).status = 401;
+    return error;
+  },
+  badRequest: (message: string) => {
+    const error = new Error(message);
+    (error as any).status = 400;
+    return error;
+  },
+  notFound: (message: string) => {
+    const error = new Error(message);
+    (error as any).status = 404;
+    return error;
+  }
+};
 
-function appError(status: number, message: string): AppError {
-  return { tag: "app_error", status, message };
-}
-
-export const Errors = {
-  badRequest: (msg: string) => appError(400, msg),
-  unauthorized: (msg: string) => appError(401, msg),
-  forbidden: (msg: string) => appError(403, msg),
-  notFound: (msg: string) => appError(404, msg),
-  internal: (msg: string) => appError(500, msg),
-} as const;
-
-export type { AppError };
+export default {
+  Errors
+};

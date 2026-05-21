@@ -1,5 +1,5 @@
 import * as cookie from "cookie";
-import { Session } from "@contracts/constants";
+import { Session } from "../contracts/constants.js";
 import { getSessionCookieOptions } from "./lib/cookies";
 import { createRouter, authedQuery } from "./middleware";
 
@@ -20,3 +20,6 @@ export const authRouter = createRouter({
     return { success: true };
   }),
 });
+
+
+

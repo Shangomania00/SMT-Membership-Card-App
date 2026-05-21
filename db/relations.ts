@@ -26,3 +26,6 @@ export const notificationsRelations = relations(notifications, ({ one }) => ({
     references: [members.id],
   }),
 }));
+
+
+

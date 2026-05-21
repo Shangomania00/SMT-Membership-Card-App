@@ -59,3 +59,4 @@ export const THEMES: Theme[] = [
 ];
 
 export type ThemeName = 'blue' | 'green' | 'red' | 'yellow';
+

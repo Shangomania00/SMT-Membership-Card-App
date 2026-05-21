@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { eq, desc, sql, and, gte } from "drizzle-orm";
 import { createRouter, staffQuery } from "../middleware";
-import { getDb } from "@db/queries/connection";
+import { getDb } from "../../api/queries/connection";
 import { members, transactions } from "@db/schema";
 
 const REWARD_THRESHOLD = 10;
@@ -172,3 +172,6 @@ export const pointsRouter = createRouter({
     };
   }),
 });
+
+
+

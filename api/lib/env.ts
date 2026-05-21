@@ -17,3 +17,6 @@ export const env = {
   kimiOpenUrl: required("KIMI_OPEN_URL"),
   ownerUnionId: process.env.OWNER_UNION_ID ?? "",
 };
+
+
+

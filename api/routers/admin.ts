@@ -1,6 +1,6 @@
 import { desc, sql } from "drizzle-orm";
 import { createRouter, staffQuery } from "../middleware";
-import { getDb } from "@db/queries/connection";
+import { getDb } from "../../api/queries/connection";
 import { members, transactions, notifications } from "@db/schema";
 
 export const adminRouter = createRouter({
@@ -62,3 +62,6 @@ export const adminRouter = createRouter({
     return recentTxns;
   }),
 });
+
+
+

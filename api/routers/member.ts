@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { eq, like, or, sql, desc } from "drizzle-orm";
 import { createRouter, publicQuery, staffQuery } from "../middleware";
-import { getDb } from "@db/queries/connection";
+import { getDb } from "../../api/queries/connection";
 import { members, transactions } from "@db/schema";
 
 // Helper to generate unique member ID
@@ -177,3 +177,6 @@ export const memberRouter = createRouter({
       };
     }),
 });
+
+
+

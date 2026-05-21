@@ -1,4 +1,4 @@
-import { ErrorMessages } from "@contracts/constants";
+import { ErrorMessages } from "../contracts/constants.js";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import type { TrpcContext } from "./context";
@@ -63,3 +63,6 @@ function requireStaffOrAdmin() {
 export const authedQuery = t.procedure.use(requireAuth);
 export const adminQuery = authedQuery.use(requireRole("admin"));
 export const staffQuery = authedQuery.use(requireStaffOrAdmin());
+
+
+

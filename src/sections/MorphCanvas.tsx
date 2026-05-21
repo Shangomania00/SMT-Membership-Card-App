@@ -286,3 +286,4 @@ export default function MorphCanvas({ style, theme, ...rest }: MorphCanvasProps)
     </div>
   );
 }
+

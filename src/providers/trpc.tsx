@@ -11,9 +11,7 @@ const queryClient = new QueryClient();
 const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
-      url: "/api/trpc",
-      transformer: superjson,
-      fetch(input, init) {
+      url: "/api/trpc",      fetch(input, init) {
         return globalThis.fetch(input, {
           ...(init ?? {}),
           credentials: "include",
@@ -32,3 +30,6 @@ export function TRPCProvider({ children }: { children: ReactNode }) {
     </trpc.Provider>
   );
 }
+
+
+

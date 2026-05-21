@@ -71,7 +71,7 @@ export const transactions = mysqlTable(
     issuedBy: bigint("issuedBy", { mode: "number", unsigned: true }),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
-  (table) => [index("txn_member_idx").on(table.memberId)]
+  (table) => ({ memberIdx: index("txn_member_idx").on(table.memberId) })
 );
 
 export type Transaction = typeof transactions.$inferSelect;
@@ -95,8 +95,12 @@ export const notifications = mysqlTable(
       .default("sent"),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
   },
-  (table) => [index("notif_member_idx").on(table.targetMemberId)]
+  (table) => ({ memberIdx: index("notif_member_idx").on(table.targetMemberId) })
 );
 
 export type Notification = typeof notifications.$inferSelect;
 export type InsertNotification = typeof notifications.$inferInsert;
+
+
+
+
