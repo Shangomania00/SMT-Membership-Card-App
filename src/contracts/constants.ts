@@ -1,26 +1,11 @@
-﻿// SMT Membership Card App Constants
-export const APP_CONFIG = {
-  name: 'SMT Membership Card App',
-  version: '1.0.0',
-  environment: process.env.NODE_ENV || 'production'
-};
-
-export const API_ROUTES = {
-  members: '/api/members',
-  cards: '/api/cards',
-  auth: '/api/auth'
-};
-
-export const DATABASE_CONFIG = {
-  host: process.env.MYSQLHOST || 'localhost',
-  port: parseInt(process.env.MYSQLPORT || '3306'),
-  user: process.env.MYSQLUSER || 'root',
-  password: process.env.MYSQLPASSWORD || '',
-  database: process.env.MYSQLDATABASE || 'smt_membership'
-};
+﻿export const APP_NAME = 'SMT-Membership-Card-App';
+export const VERSION = '1.0.0';
+export const API_URL = process.env.API_URL || 'http://localhost:3000';
+export const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
-  APP_CONFIG,
-  API_ROUTES,
-  DATABASE_CONFIG
+    APP_NAME,
+    VERSION,
+    API_URL,
+    isProduction
 };
