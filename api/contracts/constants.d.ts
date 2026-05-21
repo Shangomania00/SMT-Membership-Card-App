@@ -1,4 +1,5 @@
-﻿export const Session: {
+﻿// Type declarations for contracts/constants.js
+export const Session: {
   cookieName: string;
   maxAgeMs: number;
 };
@@ -23,11 +24,3 @@ export const Paths: {
     CARDS: string;
   };
 };
-
-declare const constants: {
-  Session: typeof Session;
-  ErrorMessages: typeof ErrorMessages;
-  Paths: typeof Paths;
-};
-
-export default constants;

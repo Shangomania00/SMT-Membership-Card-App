@@ -10,7 +10,7 @@
                                           "node"
                                       ],
                             "skipLibCheck":  true,
-                            "moduleResolution":  "bundler",
+                            "moduleResolution":  "node",
                             "allowImportingTsExtensions":  true,
                             "moduleDetection":  "force",
                             "noEmit":  true,
@@ -38,4 +38,3 @@
                     "types/**/*"
                 ]
 }
-
