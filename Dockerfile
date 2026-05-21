@@ -5,7 +5,7 @@ FROM base AS deps
 COPY package.json package-lock.json ./
 RUN npm config set fund false \
     && npm config set audit false
-RUN --mount=type=cache,id=npm-cache,target=/root/.npm \
+RUN --mount=type=cache,id=cacheKey:npm-cache,target=/root/.npm \
     npm ci --prefer-offline --no-audit
 
 FROM deps AS build
